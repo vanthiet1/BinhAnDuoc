@@ -145,8 +145,6 @@ const SectionCommentProduct = () => {
   }
 
   // const { responsData } = useFetch(() => commetServices.getAllComments(productData[0]._id), {}, [productData]);
-
-  return <div className='mt-8'>Chức năng chưa hoàn thành , đang trong quá trình chuẩn bị</div>;
 };
 
 const ProductDetailsContext = createContext();
