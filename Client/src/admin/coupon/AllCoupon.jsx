@@ -49,8 +49,7 @@ const AllCoupon = () => {
       });
       if (result) {
         await couponServices.deleteCoupon(id);
-        window.location.reload();
-        //setCouponData(couponData.filter((coupon) => coupon._id !== id));
+        setCouponData(couponData.filter((coupon) => coupon._id !== id));
       }
     } catch (error) {
       console.error('Failed to delete coupon:', error);
@@ -86,7 +85,7 @@ const AllCoupon = () => {
                   </th>
                   <th className='px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider'>
                     End day
-                  </th>
+</th>
                   <th className='px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider'>
                     Status
                   </th>
@@ -145,7 +144,7 @@ const AllCoupon = () => {
             </table>
           </div>
         </div>
-      </SectionWrapper>
+</SectionWrapper>
     </>
   );
 };

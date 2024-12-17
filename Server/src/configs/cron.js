@@ -78,9 +78,8 @@ const cronCofig = {
                 const coupons = await CouponModel.find();
                 const currentDate = new Date(); 
                 for (const coupon of coupons) {
-                    if ((!coupon.is_active && new Date(coupon.end_date) < currentDate) || (coupon.is_active && new Date(coupon.end_date) < currentDate)) {
+                    if ((new Date(coupon.end_date) < currentDate)) {
                         const deleteCoupon = await CouponModel.findByIdAndDelete(coupon._id);
-                        console.log('Đã xóa coupon:', deleteCoupon);
                     }
                 }
             } catch (error) {
